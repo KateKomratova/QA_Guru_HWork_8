@@ -12,7 +12,7 @@ def test_practice_form(browser_conf):
     registration_page.fill_gender()
     registration_page.fill_phone('8987456327')
     registration_page.fill_date_of_birth('1999','February','15')
-    registration_page.fill_subjects()
+    registration_page.fill_subjects('Physics')
     registration_page.fill_hobbies()
     registration_page.upload_picture('../resources/test_image.jpg')
     registration_page.fill_address('ul. Pobednaya, d.7, kv.55')

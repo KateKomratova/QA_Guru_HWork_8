@@ -20,7 +20,7 @@ class RegistrationPage:
         browser.element('[for=gender-radio-2]').click()
 
     def fill_phone(self, number):
-        browser.element('#userNumber').type('8987456327')
+        browser.element('#userNumber').type(number)
 
     def fill_date_of_birth(self, year, month, day):
         # Выбираем дату рождения в календаре
@@ -31,8 +31,8 @@ class RegistrationPage:
         browser.all('.react-datepicker__year-select option').element_by(have.value(year)).click()
         browser.all('.react-datepicker__day').element_by(have.exact_text(day)).click()
 
-    def fill_subjects(self):
-        browser.element('#subjectsInput').type('Physics').press_enter()
+    def fill_subjects(self,value):
+        browser.element('#subjectsInput').type(value).press_enter()
 
     def fill_hobbies(self):
         browser.element('[for=hobbies-checkbox-2]').click()
